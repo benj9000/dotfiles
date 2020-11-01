@@ -2,7 +2,7 @@
 
 autoload -Uz promptinit
 promptinit
-prompt adam1
+source ~/.zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
 setopt histignorealldups sharehistory
 
