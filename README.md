@@ -2,6 +2,7 @@
 
 for 
 
+ - urxvt
  - zsh
  
 ## Work in progress
