@@ -14,3 +14,4 @@ This will not work out of the box. But I am on it...
    - [resize-font perl](https://github.com/sim1mel/urxvt-resize-font)
  - zsh
    - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+   - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
