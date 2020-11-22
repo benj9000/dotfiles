@@ -64,3 +64,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # source zsh-syntax-highlighting.zsh AT THE END of .zshrc
 source .zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# source zsh-history-substring-search.zsh AFTER zsh-syntax-highlighting.zsh
+source .zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
