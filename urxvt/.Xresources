@@ -24,13 +24,13 @@
 *color14:      #d65d0e
 *color15:      #fbf1c7
 
-URxvt.font: xft:MesloLGS NF:style=Regular:size=12
-URxvt.boldFont: xft:MesloLGS NF:style=Bold:size=12
-URxvt.italicFont: xft:MesloLGS NF:style=Italic:size=12
-URxvt.boldItalicFont: xft:MesloLGS NF:style=Bold Italic:size=12
+URxvt.font: xft: UbuntuMono Nerd Font Mono:style=Regular:size=15
+URxvt.boldFont: xft: UbuntuMono Nerd Font Mono:style=Bold:size=15
+URxvt.italicFont: xft: UbuntuMono Nerd Font Mono:style=Italic:size=15
+URxvt.boldItalicFont: xft: UbuntuMono Nerd Font Mono:style=Bold Italic:size=15
 
-URxvt.letterSpace: -1
-URxvt.lineSpace: 0
+URxvt.letterSpace: 0
+URxvt.lineSpace: 2
 URxvt.geometry: 92x24
 URxvt.internalBorder: 8
 URxvt.cursorBlink: true
