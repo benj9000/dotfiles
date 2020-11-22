@@ -22,6 +22,16 @@ HISTSIZE=1000
 SAVEHIST=1000
 HISTFILE=~/.zsh_history
 
+# Directory navigation
+setopt AUTO_CD                  # Change directory by typing directory name.
+setopt CD_SILENT                # Never print the directory after a cd (or an implied one).
+# Directory stack
+setopt AUTO_PUSHD               # Push the current directory visited on the stack.
+setopt PUSHD_IGNORE_DUPS        # Do not store duplicates in the stack.
+setopt PUSHD_SILENT             # Do not print the directory stack after pushd or popd.
+alias d='dirs -v'
+for index ({1..9}) alias "$index"="cd +${index}"; unset index
+
 source .zsh/aliases.zsh
 
 # Use modern completion system
