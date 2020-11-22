@@ -61,6 +61,9 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+source .zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey '^ ' autosuggest-execute     # User Ctrl+Space to execute suggestion.
+
 # source zsh-syntax-highlighting.zsh AT THE END of .zshrc
 source .zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
