@@ -37,6 +37,7 @@ source .zsh/aliases.zsh
 # Use modern completion system
 autoload -Uz compinit
 compinit
+_comp_options+=(globdots)       # With hidden files
 
 zstyle ':completion:*' auto-description 'specify: %d'
 zstyle ':completion:*' completer _expand _complete _correct _approximate
