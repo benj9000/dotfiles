@@ -52,7 +52,7 @@ for index ({1..9}) alias "$index"="cd +${index}"; unset index
 bindkey -e
 
 # Load aliases
-source .zsh/aliases.zsh
+[ -f ~/.zsh/aliases.zsh ] && source ~/.zsh/aliases.zsh
 
 #   ╔═══════════════════════════════════════════════════════════════════════╗
 #   ║                              Completion                               ║
@@ -84,14 +84,14 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #   ║                             Miscellaneous                             ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
-source .zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-execute     # Use Ctrl+Space to execute suggestion
 
 # Source zsh-syntax-highlighting.zsh AT THE END of .zshrc
-source .zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Source zsh-history-substring-search.zsh AFTER zsh-syntax-highlighting.zsh
-source .zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+[ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up      # Use arrow key up to search
 bindkey '^[[B' history-substring-search-down    # Use arrow key down to search
 bindkey -M vicmd 'k' history-substring-search-up    # Use 'k' key to search in vi mode
