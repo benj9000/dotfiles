@@ -19,3 +19,10 @@ git clone https://github.com/zsh-users/zsh-history-substring-search.git ${BASEDI
 git clone https://github.com/zsh-users/zsh-autosuggestions.git ${BASEDIR}/zsh/.zsh/zsh-autosuggestions
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${BASEDIR}/zsh/.zsh/themes/powerlevel10k
 
+
+# after everything has been fetched, stow to home directory
+stow --dir ${BASEDIR} --target=$HOME -R fonts -n
+stow --dir ${BASEDIR} --target=$HOME -R urxvt -n
+# stow --dir ${BASEDIR} --target=$HOME -R vim -n
+stow --dir ${BASEDIR} --target=$HOME -R zsh -n
+
