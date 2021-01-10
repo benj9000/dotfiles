@@ -12,7 +12,8 @@ There is still work to do, e.g. a vim config.
 ### Things I used: 
  - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono)
  - urxvt
-   - [resize-font perl](https://github.com/sim1mel/urxvt-resize-font)
+   - [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font)
+   - [urxvt-tabbedex](https://github.com/mina86/urxvt-tabbedex)
  - zsh
    - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
