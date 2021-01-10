@@ -49,7 +49,7 @@ URxvt.iso14755_52: false
 
 
 ! Perl extensions
-URxvt.perl-ext-common: default,matcher,resize-font
+URxvt.perl-ext-common: default,matcher,resize-font,tabbedex
 
 
 !! Scrolling behaviour
@@ -79,4 +79,17 @@ URxvt.url-launcher: /usr/bin/xdg-open
 URxvt.matcher.button: 1
 URxvt.matcher.rend.0: Uline Bold
 URxvt.colorUL: #b8bb26
+
+!! Tabs
+
+! Hide the tabs bar when only one tab is present
+URxvt.tabbed.autohide: true
+
+! Disable the default tabbedex key mapping
+! URxvt.tabbed.no-tabbedex-keys: true
+
+! Use custom key mapping
+URxvt.keysym.Control-t: perl:tabbedex:new_tab
+URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
+URxvt.keysym.Control-Shift-ISO_Left_Tab: perl:tabbedex:prev_tab
 

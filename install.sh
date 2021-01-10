@@ -12,6 +12,7 @@ wget -P ${BASEDIR}/fonts/.fonts https://github.com/ryanoasis/nerd-fonts/raw/mast
 
 # download urxvt extensions
 wget -P ${BASEDIR}/urxvt/.urxvt/ext https://raw.githubusercontent.com/simmel/urxvt-resize-font/master/resize-font
+wget -P ${BASEDIR}/urxvt/.urxvt/ext https://github.com/mina86/urxvt-tabbedex/raw/master/tabbedex
 
 # clone some zsh package repos and the powerline theme repo
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${BASEDIR}/zsh/.zsh/zsh-syntax-highlighting
