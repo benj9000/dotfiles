@@ -22,8 +22,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${BASEDIR}/zsh/
 
 
 # after everything has been fetched, stow to home directory
-stow --dir ${BASEDIR} --target=$HOME -R fonts -n
-stow --dir ${BASEDIR} --target=$HOME -R urxvt -n
-# stow --dir ${BASEDIR} --target=$HOME -R vim -n
-stow --dir ${BASEDIR} --target=$HOME -R zsh -n
+stow --dir ${BASEDIR} --target=$HOME -R fonts
+stow --dir ${BASEDIR} --target=$HOME -R urxvt
+# stow --dir ${BASEDIR} --target=$HOME -R vim
+stow --dir ${BASEDIR} --target=$HOME -R zsh
 
