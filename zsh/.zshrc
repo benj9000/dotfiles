@@ -114,9 +114,20 @@ function auto_activate_venv() {
 chpwd_functions=(${chpwd_functions[@]} "auto_activate_venv")
 
 #   ╔═══════════════════════════════════════════════════════════════════════╗
-#   ║                             Miscellaneous                             ║
+#   ║                             lf integration                            ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
+# Source file with icons for lf (list files file manager)
+[ -f ~/.zsh/lf-icons.zsh ] && source ~/.zsh/lf-icons.zsh
+
+# Source lfcd
+# (a patched lf call that auto-cds into the last visited directory after quitting lf)
+[ -f ~/.zsh/lfcd.zsh ] && source ~/.zsh/lfcd.zsh
+
+#   ╔═══════════════════════════════════════════════════════════════════════╗
+#   ║                             Miscellaneous                             ║
+#   ╚═══════════════════════════════════════════════════════════════════════╝
+#
 [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-execute     # Use Ctrl+Space to execute suggestion
 

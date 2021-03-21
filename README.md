@@ -1,7 +1,7 @@
 # My dotfiles
 
 for 
-
+ - lf
  - urxvt
  - zsh
  
@@ -9,12 +9,13 @@ for
 
 There is still work to do, e.g. a vim config.
 
-### Things I used: 
+### Things I use: 
+ - lf (file manager)
  - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono)
- - urxvt
+ - urxvt (terminal emulator)
    - [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font)
    - [urxvt-tabbedex](https://github.com/mina86/urxvt-tabbedex)
- - zsh
+ - zsh (shell)
    - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
    - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
