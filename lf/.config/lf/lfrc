@@ -98,4 +98,13 @@ cmd zip ${{
     rm -rf $1
 }}
 
+# enable icons
 set icons
+
+# set search behaviour
+set incsearch on
+set smartcase on
+set smartdia on
+
+# set time format for time in bottom line
+set timefmt  '02/01/2006 15:04:05'
