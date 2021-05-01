@@ -114,7 +114,7 @@ URxvt.colorUL: #b8bb26
 !! Tabs
 
 ! Hide the tabs bar when only one tab is present
-URxvt.tabbed.autohide: true
+URxvt.tabbedex.autohide: true
 
 ! Disable the default tabbedex key mapping
 ! URxvt.tabbed.no-tabbedex-keys: true
