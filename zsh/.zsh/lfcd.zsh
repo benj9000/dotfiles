@@ -11,7 +11,7 @@
 # You may also like to assign a key to this command:
 #
 #     bind '"\C-o":"lfcd\C-m"'  # bash
-#     bindkey -s '^o' 'lfcd\n'  # zsh
+     bindkey -s '^o' 'lfcd\n'  # zsh
 #
 
 lfcd () {
