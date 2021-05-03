@@ -1,4 +1,4 @@
-! Base16 Darcula
+!! Base16 Darcula
 ! Scheme: Matthias Brandt (github.com/PlusMinus0) based on Darcula theme by Konstantin Bulenkov (github.com/bulenkov/Darcula)
 
 #define base00 #2B2B2B
@@ -52,4 +52,3 @@
 *color19:      base02
 *color20:      base04
 *color21:      base06
-
