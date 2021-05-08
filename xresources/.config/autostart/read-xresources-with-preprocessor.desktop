@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Exec=sh -c "xrdb ~/.Xresources"
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name=Read .Xresources using the preprocessor
+Comment=On Ubuntu start the preprocessor is disabled. To use certain features we need to read .Xresources again. 
