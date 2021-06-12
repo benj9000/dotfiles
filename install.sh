@@ -2,11 +2,12 @@
 
 BASEDIR=$(dirname $0)
 
+source external-packages.sh
 
 echo "   ╔═══════════════════════════════════════════════════════════════════════╗"
 echo "   ║                         Installing fonts...                           ║"
 echo "   ╚═══════════════════════════════════════════════════════════════════════╝"
-source fonts/.fonts/fonts.sh
+
 FONT_NUMBER=${#FONTS[@]}
 for (( i=0; i<$FONT_NUMBER; i++)); do
     # the suspected path and file name of the font in question
@@ -22,7 +23,7 @@ done
 echo "   ╔═══════════════════════════════════════════════════════════════════════╗"
 echo "   ║                    Installing urxvt extensions...                     ║"
 echo "   ╚═══════════════════════════════════════════════════════════════════════╝"
-source urxvt/.urxvt/extensions.sh
+
 EXT_NUMBER=${#URXVT_EXTS[@]}
 for (( i=0; i<$EXT_NUMBER; i++)); do
     # the suspected path and file name of the extension in question
@@ -38,7 +39,7 @@ done
 echo "   ╔═══════════════════════════════════════════════════════════════════════╗"
 echo "   ║                      Installing zsh packages...                       ║"
 echo "   ╚═══════════════════════════════════════════════════════════════════════╝"
-source zsh/.zsh/packages.sh
+
 PACKAGE_NUMBER=${#ZSH_PACKAGES[@]}
 for (( i=0; i<$PACKAGE_NUMBER; i++)); do
     # the suspected path and file name of the package in question
