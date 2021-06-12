@@ -47,7 +47,7 @@ for (( i=0; i<$PACKAGE_NUMBER; i++)); do
 
     if [ ! -d "$PACKAGE_DEST/${ZSH_PACKAGES[$i]}" ]; then
         echo "DOWNLOAD $PACKAGE_DEST/${ZSH_PACKAGES[$i]}"     
-        git clone --depth=1 "${ZSH_PACKAGE_URLS[$i]}" "$PACKAGE_DEST" 
+        git clone --depth=1 "${ZSH_PACKAGE_URLS[$i]}" "$PACKAGE_DEST/${ZSH_PACKAGES[$i]}" 
     else 
         echo "$PACKAGE_DEST/${ZSH_PACKAGES[$i]} already exists. Performing pull!"
         git -C "$PACKAGE_DEST/${ZSH_PACKAGES[$i]}" pull --ff-only
