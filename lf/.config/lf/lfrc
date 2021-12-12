@@ -44,6 +44,19 @@ cmd open ${{
 #    esac
 }}
 
+# show current directory in window title
+# snippet from https://github.com/gokcehan/lf/wiki/Tips#show-current-directory-in-window-title
+cmd on-cd &{{
+    # '&' commands run silently in background (which is what we want here),
+    # but are not connected to stdout.
+    # To make sure our escape sequence still reaches stdout we pipe it to /dev/tty
+    printf "\033]0; $PWD - lf\007" > /dev/tty
+    # If you want to show ~ instead of /home/username, change printf line above to
+    # printf "\033]0; $(pwd | sed "s|$HOME|~|") - lf\007" > /dev/tty
+}}
+# also run at startup
+on-cd
+
 # define a custom 'rename' command without prompt for overwrite
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 # map r push :rename<space>
