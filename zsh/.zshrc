@@ -3,6 +3,28 @@
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
 #   ╔═══════════════════════════════════════════════════════════════════════╗
+#   ║                             Window title                              ║
+#   ╚═══════════════════════════════════════════════════════════════════════╝
+
+case $TERM in
+  (*xterm* | *rxvt*)
+
+    # Write some info to terminal title.
+    # This is seen when the shell prompts for input.
+    function precmd {
+      printf "\033]0; $PWD\007"
+    }
+
+    # Write command and args to terminal title.
+    # This is seen while the shell waits for a command to complete.
+    function preexec {
+      printf "\033]0;%s\a" "$1"
+    }
+
+  ;;
+esac
+
+#   ╔═══════════════════════════════════════════════════════════════════════╗
 #   ║                                Prompt                                 ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
