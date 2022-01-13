@@ -80,6 +80,8 @@ bindkey -e
 #   ║                              Completion                               ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
+fpath=(~/.zsh/completion $fpath)
+
 # Use modern completion system
 autoload -Uz compinit
 compinit
