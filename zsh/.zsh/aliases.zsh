@@ -1,6 +1,6 @@
 alias ls='ls --color=auto'
-alias l='ls -l'
-alias ll='ls -la'
+alias l='ls -lh'
+alias ll='ls -lah'
 
 alias gs='git status'
 alias gp='git pull'
