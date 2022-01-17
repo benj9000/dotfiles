@@ -80,11 +80,11 @@ bindkey -e
 #   ║                              Completion                               ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
-fpath=(~/.zsh/completion $fpath)
+# Add folder with all completion functions
+fpath=(~/.zsh/completions $fpath)
 
 # Use modern completion system
-autoload -Uz compinit
-compinit
+autoload -Uz compinit && compinit
 _comp_options+=(globdots)       # With hidden files
 
 zstyle ':completion:*' auto-description 'specify: %d'
@@ -158,7 +158,7 @@ chpwd_functions=(${chpwd_functions[@]} "auto_activate_venv")
 #   ╔═══════════════════════════════════════════════════════════════════════╗
 #   ║                             Miscellaneous                             ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
-#
+
 [ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-execute     # Use Ctrl+Space to execute suggestion
 
