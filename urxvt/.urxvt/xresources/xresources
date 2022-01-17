@@ -3,10 +3,10 @@
 ! load urxvt colour scheme
 #include "darcula-colour-scheme"
 
-URxvt.font: xft: UbuntuMono Nerd Font Mono:style=Regular:size=15
-URxvt.boldFont: xft: UbuntuMono Nerd Font Mono:style=Bold:size=15
-URxvt.italicFont: xft: UbuntuMono Nerd Font Mono:style=Italic:size=15
-URxvt.boldItalicFont: xft: UbuntuMono Nerd Font Mono:style=Bold Italic:size=15
+URxvt.font: xft: UbuntuMono Nerd Font Mono:style=Regular:size=14
+URxvt.boldFont: xft: UbuntuMono Nerd Font Mono:style=Bold:size=14
+URxvt.italicFont: xft: UbuntuMono Nerd Font Mono:style=Italic:size=14
+URxvt.boldItalicFont: xft: UbuntuMono Nerd Font Mono:style=Bold Italic:size=14
 
 URxvt.letterSpace: 0
 URxvt.lineSpace: 2
