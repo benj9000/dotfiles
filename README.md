@@ -10,7 +10,8 @@ for
 There is still work to do, e.g. a vim config.
 
 ### Things I use: 
- - lf (file manager)
+
+ - [lf (file manager)](https://github.com/gokcehan/lf)
  - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono)
  - urxvt (terminal emulator)
    - [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font)
