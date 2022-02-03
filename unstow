@@ -1,0 +1,13 @@
+#!/bin/bash
+
+working_dir="$(dirname "$0")"
+
+echo '   ╔═══════════════════════════════════════════════════════════════════════╗'
+echo '   ║                             Unstowing...                              ║'
+echo '   ╚═══════════════════════════════════════════════════════════════════════╝'
+
+for dir in "$working_dir"/*/; do
+  echo
+  echo "════ Unstowing $(basename "$dir")"
+  stow -D -v --dir "$working_dir" --target="$HOME" "$(basename "$dir")"
+done
