@@ -37,7 +37,7 @@ fi
 
 autoload -Uz promptinit
 promptinit
-source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.zsh/plugins/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
@@ -159,14 +159,14 @@ chpwd_functions=(${chpwd_functions[@]} "auto_activate_venv")
 #   ║                             Miscellaneous                             ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
-[ -f ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-execute     # Use Ctrl+Space to execute suggestion
 
 # Source zsh-syntax-highlighting.zsh AT THE END of .zshrc
-[ -f ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+[ -f ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ] && source ~/.zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Source zsh-history-substring-search.zsh AFTER zsh-syntax-highlighting.zsh
-[ -f ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source ~/.zsh/zsh-history-substring-search/zsh-history-substring-search.zsh
+[ -f ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh ] && source ~/.zsh/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 bindkey '^[[A' history-substring-search-up      # Use arrow key up to search
 bindkey '^[[B' history-substring-search-down    # Use arrow key down to search
 bindkey -M vicmd 'k' history-substring-search-up    # Use 'k' key to search in vi mode
