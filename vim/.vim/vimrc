@@ -1,0 +1,98 @@
+"------------------------------------------------------------
+"------- MANDANTORY OPTIONS ---------------------------------
+"------------------------------------------------------------
+
+" set 'nocompatible' to ward off unexpected things
+set nocompatible
+
+" disable modeline for security reasons
+set nomodeline
+
+
+"------------------------------------------------------------
+"------- INDENTATION OPTIONS --------------------------------
+"------------------------------------------------------------
+
+" attempt to determine the type of a file based on its name and possibly its
+" contents. use this to allow intelligent auto-indenting for each filetype,
+" and for plugins that are filetype specific.
+filetype indent plugin on
+
+" when opening a new line and no filetype-specific indenting is enabled, keep
+" the same indent as the line you're currently on.
+set autoindent
+
+" use spaces instead of tabs
+set expandtab
+
+" one tab equals four spaces
+set shiftwidth=4
+set softtabstop=4
+
+
+
+" ------- SEARCH OPTIONS -------
+
+" highlight search matches
+set hlsearch
+
+" incremental search
+set incsearch
+
+" use case insensitive search unless they contain at least one capital letter
+set ignorecase
+set smartcase
+
+
+
+" ------- GUI OPTIONS -------
+
+" display line numbers on the left
+set number
+
+" use relative line numbers
+set relativenumber
+
+"always display the status line
+set laststatus=2
+
+"indicate lines longer than 80 characters
+highlight OverLength ctermbg=darkgrey ctermfg=white guibg=#FFD9D9
+match OverLength /\%>80v.\+/
+
+"use a colorscheme 
+"(using a colorscheme will reset all highlight groups from outside that scheme's scope.
+"prefer to choose nice colours for the terminal emulator)
+" colorscheme darcula
+
+
+
+" ------- SYNTAX OPTIONS -------
+
+" enable syntax highlighting
+syntax on
+
+
+
+" ------- MISCELLANEOUS OPTIONS -------
+
+set noswapfile  " disable swapfile
+
+
+
+
+"======> sammelbecken von möglichen optionen:
+
+" sth for trailing whitespace
+
+" always show current position
+"set ruler
+
+" better command-line completion
+"set wildmenu
+
+" Set to auto read when a file is changed from the outside
+"set autoread
+
+"set hidden
+
