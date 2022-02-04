@@ -14,7 +14,9 @@
    
 ## Installation
 
-The `setup` bash script will automatically download the fonts, packages and stuff into the cloned repository's folder. It will thed create symbolic links in the current user's home directory (using stow). The following tools are used during the installation process:
+The `setup` bash script will automatically download the fonts, packages and stuff into the cloned repository's folder. It will then create symbolic links in the current user's home directory (using stow).
+
+The following tools are used during the installation process:
 
  - [git](https://git-scm.com/)
  - [jq](https://stedolan.github.io/jq/)
