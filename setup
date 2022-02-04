@@ -127,7 +127,7 @@ function process_folder() {
 
 function stow_dotfiles() {
   echo "   ╔══════════════════════════════════════════════════"
-  echo "   ║ Stowing dotfiles"
+  echo "   ║ Stow dotfiles"
   echo "   ╚══════════════════════"
 
   for dir in "$working_dir"/*/; do
