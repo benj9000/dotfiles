@@ -1,0 +1,23 @@
+{
+  "destination": ".zsh/completions",
+  "packages": [
+    {
+      "method": "wget",
+      "source": "https://github.com/zsh-users/zsh-completions/raw/master",
+      "files": [
+        "src/_composer",
+        "src/_flutter",
+        "src/_nano",
+        "src/_node",
+        "src/_ufw"
+      ]
+    },
+    {
+      "method": "wget",
+      "source": "https://github.com/docker/compose/raw/1.29.2",
+      "files": [
+        "contrib/completion/zsh/_docker-compose"
+      ]
+    }
+  ]
+}

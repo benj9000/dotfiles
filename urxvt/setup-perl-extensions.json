@@ -1,0 +1,19 @@
+{
+  "destination": ".urxvt/ext",
+  "packages": [
+    {
+      "method": "wget",
+      "source": "https://raw.githubusercontent.com/simmel/urxvt-resize-font/master",
+      "files": [
+        "resize-font"
+      ]
+    },
+    {
+      "method": "wget",
+      "source": "https://raw.githubusercontent.com/mina86/urxvt-tabbedex/master",
+      "files": [
+        "tabbedex"
+      ]
+    }
+  ]
+}

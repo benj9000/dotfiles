@@ -1,0 +1,150 @@
+#!/bin/bash
+
+function install_git() {
+  local destination="$1" # assign first argument
+  shift
+  local repo_url="$1" # assign second argument
+
+  local files=("$@") # assign remaining arguments as an array
+
+  local repo_name="${repo_url##*/}" # get the repo name (including extension)
+  repo_name="${repo_name%%.*}"      # strip the .git part
+  local package_folder="$destination/$repo_name"
+
+  if [ -d "$package_folder" ]; then
+    echo
+    echo "   ╔══════════════════════════════════════════════════"
+    echo "   ║ Updating $repo_name"
+    echo "   ╚══════════════════════"
+    echo
+    git -C "$package_folder" pull --ff-only
+  else
+    echo
+    echo "   ╔══════════════════════════════════════════════════"
+    echo "   ║ Installing $repo_name"
+    echo "   ╚══════════════════════"
+    echo
+    # clone the repository with as little data as possible
+    git clone --filter=blob:none --depth=1 --no-checkout "$repo_url" "$package_folder"
+    if [ "${#files[@]}" -eq 0 ]; then # if $files array is empty
+      # initialise sparse checkout
+      git -C "$package_folder" config core.sparseCheckout true
+      for file in "${files[@]}"; do
+        # determine which files will be checked out,
+        # but remove leading and trailing double quotes first
+        echo "$file" | sed -e 's/^"//' -e 's/"$//' \
+          >>"$package_folder/.git/info/sparse-checkout"
+      done
+    fi
+    # finally, get the desired files
+    git -C "$package_folder" checkout
+  fi
+}
+
+function install_wget() {
+  local destination="$1" # assign first argument
+  shift
+  local source_url="$1" # assign second argument
+  shift
+  local subfolder="$1" # assign third argument
+  shift
+  local files=("$@") # assign remaining arguments as an array
+
+  local action_message
+  action_message="(Re)Installing files in $(readlink -f "$destination")"
+  if [ "$subfolder" != 'null' ]; then
+    local package_folder="$destination/$subfolder"
+    if [ -d "$package_folder" ]; then
+      action_message="Updating $subfolder"
+    else
+      mkdir -p "$package_folder"
+      action_message="Installing $subfolder"
+    fi
+  else
+    local package_folder="$destination"
+  fi
+
+  echo
+  echo '   ╔══════════════════════════════════════════════════'
+  echo "   ║ $action_message"
+  echo '   ╚══════════════════════'
+  echo
+
+  for file in "${files[@]}"; do
+    # remove leading and trailing double quotes from file name
+    local file_stripped
+    file_stripped="$(echo "$file" | sed -e 's/^"//' -e 's/"$//')"
+    wget -O "$package_folder"/"${file_stripped##*/}" "$source_url"/"$file_stripped"
+  done
+}
+
+function process_folder() {
+  local folder="$1" # assign first argument
+
+  local json_files="${folder}setup-*.json"
+  for json_file in $json_files; do
+
+    echo
+    echo "════════ Processing $json_file"
+
+    if [ -f "$json_file" ]; then
+
+      local destination
+      destination="$folder$(jq -r '.destination' "$json_file")"
+
+      jq -cr '.packages[] | .method, .source, .subfolder, .files' "$json_file" |
+        while
+          read -r method
+          read -r source
+          read -r subfolder
+          read -r files
+        do
+          if [ "$files" != 'null' ]; then
+            # create a bash array from the given JSON array of files
+            mapfile -t files_array <<<"$(echo "$files" | jq -c '.[]')"
+          fi
+
+          # delegate to the installation function
+          if [ "$method" = 'git' ]; then
+            install_git "$destination" "$source" "${files_array[@]}"
+          elif [ "$method" = 'wget' ]; then
+            install_wget "$destination" "$source" "$subfolder" "${files_array[@]}"
+          else
+            echo 'Unknown method!'
+          fi
+
+          # reset variables for next iteration
+          unset name
+          unset source
+          unset method
+          unset files
+          unset files_array
+        done
+    fi
+
+  done
+}
+
+function stow_dotfiles() {
+  echo "   ╔══════════════════════════════════════════════════"
+  echo "   ║ Stowing dotfiles"
+  echo "   ╚══════════════════════"
+
+  for dir in "$working_dir"/*/; do
+    echo
+    echo "════ Stowing $(basename "$dir")"
+    stow -R -v --dir "$working_dir" --target="$HOME" --ignore=setup-.*\.json "$(basename "$dir")"
+  done
+}
+
+working_dir="$(dirname "$0")"
+
+echo "Working directory: $(readlink -f "$working_dir")"
+
+for dir in "$working_dir"/*/; do
+  echo
+  echo "════ Processing $dir"
+  process_folder "$dir"
+done
+
+stow_dotfiles

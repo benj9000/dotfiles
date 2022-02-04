@@ -1,0 +1,38 @@
+{
+  "destination": ".zsh/plugins",
+  "packages": [
+    {
+      "method": "git",
+      "source": "https://github.com/romkatv/powerlevel10k.git"
+    },
+    {
+      "method": "git",
+      "source": "https://github.com/zsh-users/zsh-autosuggestions.git",
+      "files": [
+        "zsh-autosuggestions.zsh"
+      ]
+    },
+    {
+      "method": "git",
+      "source": "https://github.com/zsh-users/zsh-history-substring-search.git",
+      "files": [
+        "zsh-history-substring-search.zsh"
+      ]
+    },
+    {
+      "method": "git",
+      "source": "https://github.com/zsh-users/zsh-syntax-highlighting.git",
+      "files": [
+        "zsh-syntax-highlighting.zsh"
+      ]
+    },
+    {
+      "method": "wget",
+      "source": "https://github.com/ohmyzsh/ohmyzsh/raw/master",
+      "subfolder": "ohmyzsh-sudo-plugin",
+      "files": [
+        "plugins/sudo/sudo.plugin.zsh"
+      ]
+    }
+  ]
+}
