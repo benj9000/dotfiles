@@ -1,31 +1,23 @@
-# My dotfiles
-
-for 
- - lf
- - urxvt
- - zsh
- 
-## Work in progress
-
-There is still work to do, e.g. a vim config.
-
-### Things I use: 
+# Dotfiles
 
  - [lf (file manager)](https://github.com/gokcehan/lf)
- - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono)
- - urxvt (terminal emulator)
+ - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono) (font family)
+ - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) (terminal emulator)
    - [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font)
    - [urxvt-tabbedex](https://github.com/mina86/urxvt-tabbedex)
- - zsh (shell)
+ - [zsh](https://www.zsh.org/) (shell)
    - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
    - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
    - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+   - [Oh My Zsh sudo plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
    
-### Installation
+## Installation
 
-Requirements: [wget](https://www.gnu.org/software/wget/), [git](https://git-scm.com/), [stow](https://www.gnu.org/software/stow/)
+The `setup` bash script will automatically download the fonts, packages and stuff into the cloned repository's folder. It will thed create symbolic links in the current user's home directory (using stow). The following tools are used during the installation process:
 
-This works for me, __but might not work for you__!
-The install script will automatically download the fonts and stuff into the cloned repository's folder and create symbolic links in the current user's home directory (using stow). It will not verify that all requirements are met.
+ - [git](https://git-scm.com/)
+ - [jq](https://stedolan.github.io/jq/)
+ - [stow](https://www.gnu.org/software/stow/)
+ - [wget](https://www.gnu.org/software/wget/)
 
