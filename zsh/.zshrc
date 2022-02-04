@@ -156,8 +156,10 @@ chpwd_functions=(${chpwd_functions[@]} "auto_activate_venv")
 [ -f ~/.zsh/lfcd.zsh ] && source ~/.zsh/lfcd.zsh
 
 #   ╔═══════════════════════════════════════════════════════════════════════╗
-#   ║                             Miscellaneous                             ║
+#   ║                                Plugins                                ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
+
+[ -f ~/.zsh/plugins/ohmyzsh-sudo-plugin/sudo.plugin.zsh ] && source ~/.zsh/plugins/ohmyzsh-sudo-plugin/sudo.plugin.zsh
 
 [ -f ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ] && source ~/.zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 bindkey '^ ' autosuggest-execute     # Use Ctrl+Space to execute suggestion
