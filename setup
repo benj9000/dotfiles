@@ -42,13 +42,13 @@ function install_git() {
 }
 
 function install_wget() {
-  local destination="$1" # assign first argument
+  local destination="$1"  # assign first argument
   shift
-  local source_url="$1" # assign second argument
+  local source_url="$1"  # assign second argument
   shift
-  local subfolder="$1" # assign third argument
+  local subfolder="$1"  # assign third argument
   shift
-  local files=("$@") # assign remaining arguments as an array
+  local files=("$@")  # assign remaining arguments as an array
 
   local action_message
   action_message="(Re)Installing files in $(readlink -f "$destination")"
