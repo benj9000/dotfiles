@@ -74,7 +74,14 @@ function install_wget() {
     # remove leading and trailing double quotes from file name
     local file_stripped
     file_stripped="$(echo "$file" | sed -e 's/^"//' -e 's/"$//')"
-    wget -O "$package_folder"/"${file_stripped##*/}" "$source_url"/"$file_stripped"
+    # define final local file path for the file to download
+    local file_path
+    file_path="$package_folder/${file_stripped##*/}"
+    # download to a temporary location and and move afterwards to avoid 
+    # crashes during updating because incomplete files would be used during the
+    # download process
+    wget -O "$file_path.tmp" "$source_url"/"$file_stripped"
+    mv "$file_path.tmp" "$file_path"
   done
 }
 
