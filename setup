@@ -91,10 +91,10 @@ function process_folder() {
   local json_files="${folder}setup-*.json"
   for json_file in $json_files; do
 
-    echo
-    echo "════════ Processing $json_file"
-
     if [ -f "$json_file" ]; then
+
+      echo
+      echo "════════ Processing $json_file"
 
       local destination
       destination="$folder$(jq -r '.destination' "$json_file")"
