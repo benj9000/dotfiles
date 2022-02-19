@@ -1,6 +1,6 @@
 # Dotfiles
 
- - [lf (file manager)](https://github.com/gokcehan/lf)
+ - [lf](https://github.com/gokcehan/lf) (file manager)
  - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono) (font family)
  - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) (terminal emulator)
    - [keyboard-select](https://github.com/muennich/urxvt-perls)
