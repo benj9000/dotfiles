@@ -4,7 +4,7 @@ function install_git() {
   local destination="$1" # assign first argument
   shift
   local repo_url="$1" # assign second argument
-
+  shift
   local files=("$@") # assign remaining arguments as an array
 
   local repo_name="${repo_url##*/}" # get the repo name (including extension)
@@ -26,7 +26,7 @@ function install_git() {
     echo
     # clone the repository with as little data as possible
     git clone --filter=blob:none --depth=1 --no-checkout "$repo_url" "$package_folder"
-    if [ "${#files[@]}" -eq 0 ]; then # if $files array is empty
+    if [ ! "${#files[@]}" -eq 0 ]; then # if $files array is not empty
       # initialise sparse checkout
       git -C "$package_folder" config core.sparseCheckout true
       for file in "${files[@]}"; do
