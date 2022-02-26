@@ -21,10 +21,7 @@
     },
     {
       "method": "git",
-      "source": "https://github.com/zsh-users/zsh-syntax-highlighting.git",
-      "files": [
-        "zsh-syntax-highlighting.zsh"
-      ]
+      "source": "https://github.com/zsh-users/zsh-syntax-highlighting.git"
     },
     {
       "method": "wget",
