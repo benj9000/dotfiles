@@ -108,41 +108,8 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #   ║                                Python                                 ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
-# Do not allow to use pip outside virtual environments
-export PIP_REQUIRE_VIRTUALENV=true
-
-#   ╔═══════════════════════════════════════════════════════════════════════╗
-#   ║            Automatic virtual Python environment activation            ║
-#   ╚═══════════════════════════════════════════════════════════════════════╝
-
-# Helper function for activating venv
-function activate_venv() {
-    # if venv folder is found, activate virtual environment
-    if [[ -d ./venv ]] ; then
-        source ./venv/bin/activate
-        printf "Activating %s.\n" "$VIRTUAL_ENV"
-    fi
-}
-
-# Function for activating the venv when changing to project directory and 
-# deactivating when leaving project
-function auto_activate_venv() {
-  if [[ -z "$VIRTUAL_ENV" ]] ; then
-      activate_venv
-  else
-      parentdir="$(dirname "$VIRTUAL_ENV")"
-      # if the current folder does not belong to earlier virtual environment folder,
-      # deactivate virtual environment, else do nothing
-      if [[ "$PWD"/ != "$parentdir"/* ]] ; then
-          printf "Deactivating %s.\n" "$VIRTUAL_ENV"
-          deactivate
-          activate_venv
-      fi
-  fi
-}
-
-# Add to the chpwd hook function 
-chpwd_functions=(${chpwd_functions[@]} "auto_activate_venv")
+# Source file with functions about virtual environments
+[ -f ~/.zsh/python-env.zsh ] && source ~/.zsh/python-env.zsh
 
 #   ╔═══════════════════════════════════════════════════════════════════════╗
 #   ║                             lf integration                            ║
