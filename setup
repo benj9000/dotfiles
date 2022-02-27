@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 function install_git() {
   local destination="$1" # assign first argument
