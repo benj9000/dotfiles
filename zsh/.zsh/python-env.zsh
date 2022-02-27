@@ -19,9 +19,12 @@ function activate_env() {
         printf "Activating %s.\n" "$VIRTUAL_ENV"
     # If poetry.lock file is found, activate virtual environment
     elif [[ -f ./poetry.lock ]]; then
-        source "$(poetry env list --full-path | sort -k 2 | tail -n 1 | cut -d ' ' -f 1)/bin/activate"
-        project_dir="$PWD"
-        printf "Activating %s.\n" "$VIRTUAL_ENV"
+        local env_path="$(poetry env list --full-path | sort -k 2 | tail -n 1 | cut -d ' ' -f 1)"
+        if [[ -n "$env_pass" ]]; then
+            source "$env_path/bin/activate"
+            project_dir="$PWD"  # Remember project directory to know when to disable it later
+            printf "Activating %s.\n" "$VIRTUAL_ENV"
+        fi
     fi
 }
 
