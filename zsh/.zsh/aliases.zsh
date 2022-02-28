@@ -8,6 +8,7 @@ alias lr='l --recursive'
 alias llr='ll --recursive'
 alias ldot='ls -l --directory .*'
 
+alias gf='git fetch'
 alias gs='git status'
 alias gp='git pull'
 alias gc='git commit'
