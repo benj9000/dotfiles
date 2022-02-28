@@ -1,4 +1,5 @@
-alias ...='../..'
+alias -g ...='../..'
+alias -g ....='../../..'
 
 alias ls='ls --human-readable --color=auto --group-directories-first'
 alias l='ls -1'
