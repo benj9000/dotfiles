@@ -1,7 +1,11 @@
 # Dotfiles
 
  - [lf](https://github.com/gokcehan/lf) (file manager)
- - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono) (font family)
+   - file previews with (if installed)
+     - [highlight](http://www.andre-simon.de/doku/highlight/highlight.php)
+     - [mediainfo](https://mediaarea.net/en/MediaInfo/)
+     - [pdftotext from poppler-utils](https://poppler.freedesktop.org)
+ - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono/) (font family)
  - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) (terminal emulator)
    - [keyboard-select](https://github.com/muennich/urxvt-perls)
    - [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font)

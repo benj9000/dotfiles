@@ -44,6 +44,9 @@ cmd open ${{
 #    esac
 }}
 
+# enable previews
+set previewer ~/.scripts/previewer.sh
+
 # show current directory in window title
 # snippet from https://github.com/gokcehan/lf/wiki/Tips#show-current-directory-in-window-title
 cmd on-cd &{{
