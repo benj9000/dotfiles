@@ -44,6 +44,9 @@ cmd open ${{
 #    esac
 }}
 
+# show current file with pager
+map i $LESSOPEN='| ~/.scripts/previewer.sh %s' less -R $f
+
 # enable previews
 set previewer ~/.scripts/previewer.sh
 
