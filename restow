@@ -1,0 +1,13 @@
+#!/bin/bash
+
+working_dir="$(dirname "$0")"
+
+echo "   ╔══════════════════════════════════════════════════"
+echo "   ║ Restow dotfiles"
+echo "   ╚══════════════════════"
+
+for dir in "$working_dir"/*/; do
+  echo
+  echo "════ Restowing $(basename "$dir")"
+  stow -R -v --dir "$working_dir" --target="$HOME" --ignore=setup-.*\.json "$(basename "$dir")"
+done
