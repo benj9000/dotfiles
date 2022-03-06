@@ -1,5 +1,6 @@
 # Dotfiles
 
+ - [less](http://www.greenwoodsoftware.com/less/) (pager)
  - [lf](https://github.com/gokcehan/lf) (file manager)
    - file previews with (if installed)
      - [highlight](http://www.andre-simon.de/doku/highlight/highlight.php)
