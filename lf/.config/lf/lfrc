@@ -67,12 +67,12 @@ on-cd
 # cmd rename %[ -e $1 ] && printf "file exists" || mv $f $1
 # map r push :rename<space>
 
-# make sure trash folder exists
-# %mkdir -p ~/.trash
 
 # move current file or selected files to trash folder
-# (also see 'man mv' for backup/overwrite options)
-cmd trash %set -f; mv $fx ~/.trash
+cmd trash %trash-put $(echo $fx);
+# TODO why does set -f does not work for me although used in lots of examples?
+# cmd trash %set -f; trash-put $fx
+map <delete> trash
 
 # define a custom 'delete' command
 # cmd delete ${{
@@ -83,9 +83,6 @@ cmd trash %set -f; mv $fx ~/.trash
 #     [ $ans = "y" ] && rm -rf $fx
 # }}
 
-# use '<delete>' key for either 'trash' or 'delete' command
-# map <delete> trash
-# map <delete> delete
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
