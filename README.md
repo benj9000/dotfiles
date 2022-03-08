@@ -1,12 +1,10 @@
 # Dotfiles
 
+## Tools and plugins covered
+
  - [lf](https://github.com/gokcehan/lf) (file manager)
-   - file previews with (if installed)
-     - [highlight](http://www.andre-simon.de/doku/highlight/highlight.php)
-     - [mediainfo](https://mediaarea.net/en/MediaInfo/)
-     - [pdftotext from poppler-utils](https://poppler.freedesktop.org)
+   - file previews with the `previewer.sh` script (see below)
    - recycle bin with [trash-cli](https://github.com/andreafrancia/trash-cli)
- - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono/) (font family)
  - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) (terminal emulator)
    - [keyboard-select](https://github.com/muennich/urxvt-perls)
    - [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font)
@@ -18,6 +16,18 @@
    - [zsh-history-substring-search](https://github.com/zsh-users/zsh-history-substring-search)
    - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
    - [Oh My Zsh sudo plugin](https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/sudo)
+
+## Scripts
+
+  - `previewer.sh` 
+    - file previews in the terminal with (if installed):
+      - [highlight](http://www.andre-simon.de/doku/highlight/highlight.php)
+      - [mediainfo](https://mediaarea.net/en/MediaInfo/)
+      - [pdftotext from poppler-utils](https://poppler.freedesktop.org)
+
+## Other assets
+
+ - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono/) (font family)
    
 ## Installation
 
