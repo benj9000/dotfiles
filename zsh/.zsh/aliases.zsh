@@ -15,3 +15,5 @@ alias gc='git commit'
 
 alias grep='grep -i --color'
 
+alias lg='lazygit'
+alias ld='lazydocker'
