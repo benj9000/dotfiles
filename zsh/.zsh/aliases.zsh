@@ -17,3 +17,6 @@ alias grep='grep -i --color'
 
 alias lg='lazygit'
 alias ld='lazydocker'
+
+export LESSOPEN="|~/.scripts/previewer.sh %s"  # set environment variable for a less pipe
+alias less='less -R'  # call less always with -R to process the syntax highlighting from the less pipe

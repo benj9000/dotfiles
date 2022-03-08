@@ -105,15 +105,6 @@ zstyle ':completion:*:*:kill:*:processes' list-colors '=(#b) #([0-9]#)*=0=01;31'
 zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 
 #   ╔═══════════════════════════════════════════════════════════════════════╗
-#   ║                                 less                                  ║
-#   ╚═══════════════════════════════════════════════════════════════════════╝
-
-# Set environment variable for a less pipe
-export LESSOPEN="|~/.scripts/previewer.sh %s"
-# Call less always with -R to process the syntax highlighting from the less pipe
-alias less='less -R'
-
-#   ╔═══════════════════════════════════════════════════════════════════════╗
 #   ║                                Python                                 ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
