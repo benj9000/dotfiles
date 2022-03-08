@@ -6,6 +6,7 @@
      - [highlight](http://www.andre-simon.de/doku/highlight/highlight.php)
      - [mediainfo](https://mediaarea.net/en/MediaInfo/)
      - [pdftotext from poppler-utils](https://poppler.freedesktop.org)
+   - recycle bin with [trash-cli](https://github.com/andreafrancia/trash-cli)
  - [Ubunuto Mono Nerd Font](https://github.com/ryanoasis/nerd-fonts/tree/master/patched-fonts/UbuntuMono/) (font family)
  - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) (terminal emulator)
    - [keyboard-select](https://github.com/muennich/urxvt-perls)
