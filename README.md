@@ -5,6 +5,7 @@
  - [lf](https://github.com/gokcehan/lf) (file manager)
    - file previews with the `previewer.sh` script (see below)
    - recycle bin with [trash-cli](https://github.com/andreafrancia/trash-cli)
+ - [streamlink](https://streamlink.github.io/)
  - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) (terminal emulator)
    - [keyboard-select](https://github.com/muennich/urxvt-perls)
    - [urxvt-resize-font](https://github.com/simmel/urxvt-resize-font)
