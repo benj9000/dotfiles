@@ -86,7 +86,7 @@ map <delete> trash
 # bookmarks
 map b mark-load
 map B mark-save
-map " mark-remove
+map <"> mark-remove
 
 # extract the current file with the right command
 # (xkcd link: https://xkcd.com/1168/)
