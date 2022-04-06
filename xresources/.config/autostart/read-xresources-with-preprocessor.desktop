@@ -1,6 +1,6 @@
 [Desktop Entry]
 Type=Application
-Exec=sh -c "xrdb ~/.Xresources"
+Exec=sh -c "xrdb -merge ~/.Xresources"
 Hidden=false
 NoDisplay=false
 X-GNOME-Autostart-enabled=true
