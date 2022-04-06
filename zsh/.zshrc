@@ -115,9 +115,6 @@ zstyle ':completion:*:kill:*' command 'ps -u $USER -o pid,%cpu,tty,cputime,cmd'
 #   ║                             lf integration                            ║
 #   ╚═══════════════════════════════════════════════════════════════════════╝
 
-# Source file with icons for lf (list files file manager)
-[ -f ~/.zsh/lf-icons.zsh ] && source ~/.zsh/lf-icons.zsh
-
 # Source lfcd
 # (a patched lf call that auto-cds into the last visited directory after quitting lf)
 [ -f ~/.zsh/lfcd.zsh ] && source ~/.zsh/lfcd.zsh
