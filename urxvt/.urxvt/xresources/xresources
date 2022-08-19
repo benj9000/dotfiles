@@ -20,7 +20,7 @@ URxvt.scrollBar_right: true
 URxvt.scrollstyle: plain
 URxvt.scrollColor: base01
 URxvt.urgentOnBell: true
-URxvt.depth: 24
+! URxvt.depth: 24
 
 ! disable keybinding ctrl+shift to iso14755 key cap mode (mode to enter unicode codes)
 URxvt.iso14755: false
@@ -28,7 +28,7 @@ URxvt.iso14755_52: false
 
 
 ! Perl extensions
-URxvt.perl-ext-common: default,matcher,resize-font,tabbedex
+URxvt.perl-ext-common: default,keyboard-select,matcher,resize-font,tabbedex
 
 
 !! Scrolling behaviour
@@ -71,4 +71,10 @@ URxvt.tabbedex.autohide: true
 URxvt.keysym.Control-t: perl:tabbedex:new_tab
 URxvt.keysym.Control-Tab: perl:tabbedex:next_tab
 URxvt.keysym.Control-Shift-ISO_Left_Tab: perl:tabbedex:prev_tab
+
+!! Keyboad select
+
+! Make Meta (alt) key start selection mode
+URxvt.keysym.M-y: perl:keyboard-select:activate
+URxvt.keyboard-select.clipboard: true
 

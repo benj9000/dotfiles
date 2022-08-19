@@ -3,6 +3,13 @@
   "packages": [
     {
       "method": "wget",
+      "source": "https://raw.githubusercontent.com/muennich/urxvt-perls/master",
+      "files": [
+        "keyboard-select"
+      ]
+    },
+    {
+      "method": "wget",
       "source": "https://raw.githubusercontent.com/simmel/urxvt-resize-font/master",
       "files": [
         "resize-font"
