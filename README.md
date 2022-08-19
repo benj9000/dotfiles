@@ -6,6 +6,9 @@
  - [lf](https://github.com/gokcehan/lf) (file manager)
    - file previews with the `preview.sh` script (see below)
    - recycle bin with [trash-cli](https://github.com/andreafrancia/trash-cli)
+ - [mpv](https://mpv.io/) (media player)
+ - [rofi](https://github.com/davatorium/rofi) (window switcher, application launcher, dmenu replacement)
+   - custom power menu inspired by [rofi-power-menu](https://github.com/jluttine/rofi-power-menu) 
  - [streamlink](https://streamlink.github.io/)
    - [mpv](https://mpv.io/) as default video player
  - [urxvt](http://software.schmorp.de/pkg/rxvt-unicode.html) (terminal emulator)

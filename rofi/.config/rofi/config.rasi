@@ -1,8 +1,8 @@
 configuration {
- modi: "drun,window,ssh,combi";
- theme: "darcula";
- font: "hack 10";
- show-icons: true;
- combi-modi: "window,drun,ssh";
- }
+  modi: "combi,drun,run,window,ssh";
+  font: "UbuntuMono Nerd Font Mono 19";
+  show-icons: true;
+  combi-modi: "window,drun,run";
+}
 
+@theme "darcula"
