@@ -8,7 +8,7 @@ function install_git() {
   local files=("$@") # assign remaining arguments as an array
 
   local repo_name="${repo_url##*/}" # get the repo name (including extension)
-  repo_name="${repo_name%%.*}"      # strip the .git part
+  repo_name="${repo_name%.git}"      # strip the .git part
   local package_folder="$destination/$repo_name"
 
   if [ -d "$package_folder" ]; then
