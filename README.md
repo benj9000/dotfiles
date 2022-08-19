@@ -2,6 +2,7 @@
 
 ## Tools and plugins covered
 
+ - [kitty](https://sw.kovidgoyal.net/kitty/) (terminal emulator)
  - [lf](https://github.com/gokcehan/lf) (file manager)
    - file previews with the `preview.sh` script (see below)
    - recycle bin with [trash-cli](https://github.com/andreafrancia/trash-cli)
