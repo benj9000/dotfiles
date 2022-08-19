@@ -3,7 +3,7 @@
 ## Tools and plugins covered
 
  - [lf](https://github.com/gokcehan/lf) (file manager)
-   - file previews with the `previewer.sh` script (see below)
+   - file previews with the `preview.sh` script (see below)
    - recycle bin with [trash-cli](https://github.com/andreafrancia/trash-cli)
  - [streamlink](https://streamlink.github.io/)
    - [mpv](https://mpv.io/) as default video player
@@ -21,7 +21,7 @@
 
 ## Scripts
 
-  - `previewer.sh` 
+  - `preview.sh` 
     - file previews in the terminal with (if installed):
       - [highlight](http://www.andre-simon.de/doku/highlight/highlight.php)
       - [mediainfo](https://mediaarea.net/en/MediaInfo/)
