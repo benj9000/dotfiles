@@ -26,6 +26,9 @@
       - [highlight](http://www.andre-simon.de/doku/highlight/highlight.php)
       - [mediainfo](https://mediaarea.net/en/MediaInfo/)
       - [pdftotext from poppler-utils](https://poppler.freedesktop.org)
+ - `screenshot.sh`
+   - [maim](https://github.com/naelstrof/maim)
+   - [notify-send](https://manpages.ubuntu.com/manpages/xenial/man1/notify-send.1.html) 
 
 ## Other assets
 
