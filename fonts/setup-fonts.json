@@ -6,6 +6,10 @@
       "source": "https://github.com/ryanoasis/nerd-fonts/raw/master",
       "method": "wget",
       "files": [
+        "patched-fonts/UbuntuMono/Regular/complete/Ubuntu Mono Nerd Font Complete.ttf",
+        "patched-fonts/UbuntuMono/Regular-Italic/complete/Ubuntu Mono Italic Nerd Font Complete.ttf",
+        "patched-fonts/UbuntuMono/Bold/complete/Ubuntu Mono Bold Nerd Font Complete.ttf",
+        "patched-fonts/UbuntuMono/Bold-Italic/complete/Ubuntu Mono Bold Italic Nerd Font Complete.ttf",
         "patched-fonts/UbuntuMono/Regular/complete/Ubuntu Mono Nerd Font Complete Mono.ttf",
         "patched-fonts/UbuntuMono/Regular-Italic/complete/Ubuntu Mono Italic Nerd Font Complete Mono.ttf",
         "patched-fonts/UbuntuMono/Bold/complete/Ubuntu Mono Bold Nerd Font Complete Mono.ttf",
