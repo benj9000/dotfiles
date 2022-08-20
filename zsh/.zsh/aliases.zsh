@@ -15,8 +15,10 @@ alias gc='git commit'
 
 alias grep='grep -i --color'
 
+export LESSOPEN="|~/.scripts/previewer.sh %s"  # set environment variable for a less pipe
+alias less='less -R'  # call less always with -R to process the syntax highlighting from the less pipe
+
 alias lg='lazygit'
 alias ld='lazydocker'
 
-export LESSOPEN="|~/.scripts/previewer.sh %s"  # set environment variable for a less pipe
-alias less='less -R'  # call less always with -R to process the syntax highlighting from the less pipe
+alias shfmt='shfmt -i 4 -ci'
