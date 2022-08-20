@@ -22,3 +22,12 @@ alias lg='lazygit'
 alias ld='lazydocker'
 
 alias shfmt='shfmt -i 4 -ci'
+
+# prepend some commands with 'noglob' to disable globbing.
+# with this, there is no need to escape strings with globbing characters.
+# this is especially useful when URLs are expected as arguments.
+alias curl='noglob curl'
+alias mpv='noglob mpv'
+alias streamlink='noglob streamlink'
+alias wget='noglob wget'
+alias yt-dlp='noglob yt-dlp'
